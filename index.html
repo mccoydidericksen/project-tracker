@@ -25,6 +25,50 @@
         <h2 id="current-time"></h2>
       </div>
     </div>
+    <div class="card" style="width: 18rem;">
+      <!-- <img src="..." class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Enter Project Details</h5>
+        <p class="card-text"> Please enter your project title, type and due date by clicking the button below</p>
+        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">Go somewhere</a>
+      </div>
+    </div>
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Project Info</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="project-name" class="col-form-label">Project Name:</label>
+                <input type="text" class="form-control" id="project-name" required>
+              </div>
+              <div class="mb-3">
+                <label for="project-type" class="col-form-label">Project Type:</label>
+                <select class="form-control" id="project-type" required>
+                  <option value="frontenddev">Front End Development</option>
+                  <option value="backenddev">Back End Development</option>
+                  <option value="fullstack">Full Stack Development</option>
+                  <option value="mobiledev">Mobile Development</option>
+
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="due-date" class="col-form-label">Due Date:</label>
+                <input type="date" class="form-control" id="due-date" required></input>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="addproject">Add Project</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./assets/scripts/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
